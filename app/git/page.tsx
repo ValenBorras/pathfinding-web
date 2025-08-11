@@ -36,7 +36,7 @@ export default function GitPage() {
             </a>
           </p>
         </div>
-        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-gray]" />
+        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-card]" />
       </div>
       <div className="mt-10">
         <Link href="/assistance-request" className="inline-flex items-center rounded-md bg-[--color-accent] px-4 py-2 text-sm text-white">

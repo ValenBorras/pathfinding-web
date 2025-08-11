@@ -34,7 +34,7 @@ export default function MercadoToolkitBRPage() {
             </a>
           </div>
         </div>
-        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-gray]" />
+        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-card]" />
       </div>
     </div>
   );

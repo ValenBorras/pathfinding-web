@@ -34,7 +34,7 @@ export default function MercadoToolkitPage() {
             </a>
           </div>
         </div>
-        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-gray]" />
+        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-card]" />
       </div>
       <div className="mt-10 text-sm text-[--color-muted]">
         <p>Soporte: <a className="hover:underline" href="mailto:support@mercadotoolkit.com">support@mercadotoolkit.com</a></p>

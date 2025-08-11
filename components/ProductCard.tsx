@@ -20,11 +20,11 @@ export default function ProductCard({
   badge,
 }: ProductCardProps) {
   return (
-    <div className="rounded-xl border border-[--color-border] p-6 bg-white dark:bg-[#0e1416] h-full flex flex-col">
+    <div className="rounded-xl border border-[--color-border] p-6 bg-[--color-card] h-full flex flex-col">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-lg font-semibold">{title}</h3>
         {badge ? (
-          <span className="text-[10px] uppercase tracking-wide rounded bg-[--color-gray] px-2 py-1 text-[--color-muted]">
+          <span className="text-[10px] uppercase tracking-wide rounded bg-[--color-card] px-2 py-1 text-[--color-muted]">
             {badge}
           </span>
         ) : null}
@@ -36,7 +36,7 @@ export default function ProductCard({
             href={hrefSite}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm rounded-md border border-[--color-border] px-3 py-1.5 hover:bg-[--color-gray]"
+            className="text-sm rounded-md border border-[--color-border] px-3 py-1.5 hover:bg-[--color-card]"
           >
             Abrir sitio
           </a>

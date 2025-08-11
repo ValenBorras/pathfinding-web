@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  /* Minimal, dark, text-first palette with red accent */
-  --background: #0d0f12; /* dark gray */
-  --foreground: #f3f4f6; /* near-white */
-  --muted: #a3aab6;      /* soft gray */
-  --border: #272b33;     /* subtle borders */
+  /* Requested palette */
+  --background: #161616; /* background */
+  --foreground: #dcdcdc; /* titles (bone) */
+  --muted: #8a8a8a;      /* subtitles & body text */
+  --border: #8a8a8a;     /* general borders */
+  --card: #1a1a1a;       /* card backgrounds */
   --accent: #ef4444;     /* red highlights */
-  --accent-foreground: #fff1f2;
-  --black: #0d0f12;
-  --white: #ffffff;
-  --gray-100: #111318;
-  --gray-200: #1a1f26;
+  --accent-foreground: #ffffff;
 }
 
 @theme inline {
@@ -21,11 +18,9 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-red: var(--red);
-  --color-black: var(--black);
-  --color-white: var(--white);
-  --color-gray-100: var(--gray-100);
-  --color-gray-200: var(--gray-200);
+  --color-card: var(--card);
+  --color-gray-100: var(--card);
+  --color-gray-200: var(--card);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -36,9 +31,9 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   /* Dotted grid background */
   background-image:
-    radial-gradient(circle at 0.7px 0.7px, rgba(255,255,255,0.08) 0.7px, transparent 1px);
-  background-size: 20px 20px, 20px 20px;
-  background-position: 0 0, 8px 8px;
+    radial-gradient(circle at 0.7px 0.7px, #303030 0.7px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0;
 }
 
 /* Focus states */
@@ -49,7 +44,13 @@ body {
 
 /* Utilities */
 .container {
-  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  /* Centered, constrained content for roomy side gutters on desktop */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 60rem; /* ~960px */
 }
 
 /* Links and buttons */
