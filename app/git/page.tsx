@@ -16,7 +16,7 @@ export default function GitPage() {
         subtitle="ERP/CRM para retail y distribución. Control de inventario, listas de precios y reglas de repricing."
       />
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
-        <div className="space-y-4 text-sm text-[--color-muted]">
+        <div className="space-y-4 text-sm text-[#8a8a8a]">
           <h3 className="text-base font-semibold text-foreground">Características</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>Inventario y stock multi-depósito.</li>
@@ -36,10 +36,10 @@ export default function GitPage() {
             </a>
           </p>
         </div>
-        <div className="rounded-xl border border-[--color-border] h-64 bg-[--color-card]" />
+        <div className="rounded-xl border border-[#303030] h-64 bg-[#1a1a1a]" />
       </div>
       <div className="mt-10">
-        <Link href="/assistance-request" className="inline-flex items-center rounded-md bg-[--color-accent] px-4 py-2 text-sm text-white">
+        <Link href="/assistance-request" className="inline-flex items-center rounded-md bg-[#ef4444] px-4 py-2 text-sm text-white">
           Solicitar implementación
         </Link>
       </div>

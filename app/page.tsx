@@ -8,14 +8,14 @@ export default function Home() {
           <h1 className="text-4xl sm:text-6xl font-semibold leading-[1.1] tracking-tight">
             Software que acelera tu operativa
           </h1>
-          <p className="mt-5 text-lg text-[--muted] max-w-prose">
+          <p className="mt-5 text-lg text-[#8a8a8a] max-w-prose">
             Herramientas y extensiones prácticas para vendedores: FBAToolkit,
             MercadoToolkit y GIT 2.0. Integraciones reales, automatización y
             soporte claro.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/products" className="btn btn-primary">Ver productos</Link>
-            <Link href="/assistance-request" className="btn btn-outline">Contacto</Link>
+            <Link href="/products" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition bg-[#ef4444] text-white">Ver productos</Link>
+            <Link href="/assistance-request" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition border border-[#303030]">Contacto</Link>
           </div>
         </div>
       </section>
@@ -79,16 +79,16 @@ function ProductCard({
   hrefDetails: string;
 }) {
   return (
-    <div className="rounded-lg border border-[--color-border] p-6 bg-[--color-gray-100]">
+    <div className="rounded-lg border border-[#303030] p-6 bg-[#1a1a1a]">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <a href={hrefSite} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[--accent]">
+        <a href={hrefSite} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[#ef4444]">
           Abrir sitio ↗
         </a>
       </div>
-      <p className="mt-2 text-sm text-[--color-muted]">{description}</p>
+      <p className="mt-2 text-sm text-[#8a8a8a]">{description}</p>
       <div className="mt-4">
-        <Link href={hrefDetails} className="text-sm hover:text-[--accent]">
+        <Link href={hrefDetails} className="text-sm hover:text-[#ef4444]">
           Ver detalles
         </Link>
       </div>

@@ -20,23 +20,23 @@ export default function ProductCard({
   badge,
 }: ProductCardProps) {
   return (
-    <div className="rounded-xl border border-[--color-border] p-6 bg-[--color-card] h-full flex flex-col">
+    <div className="rounded-xl border border-[#303030] p-6 bg-[#1a1a1a] h-full flex flex-col">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-lg font-semibold">{title}</h3>
         {badge ? (
-          <span className="text-[10px] uppercase tracking-wide rounded bg-[--color-card] px-2 py-1 text-[--color-muted]">
+          <span className="text-[10px] uppercase tracking-wide rounded bg-[#1a1a1a] px-2 py-1 text-[#8a8a8a]">
             {badge}
           </span>
         ) : null}
       </div>
-      <p className="mt-2 text-sm text-[--color-muted] flex-1">{description}</p>
+      <p className="mt-2 text-sm text-[#8a8a8a] flex-1">{description}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         {hrefSite ? (
           <a
             href={hrefSite}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm rounded-md border border-[--color-border] px-3 py-1.5 hover:bg-[--color-card]"
+            className="text-sm rounded-md border border-[#303030] px-3 py-1.5 hover:bg-[#1a1a1a]"
           >
             Abrir sitio
           </a>
@@ -46,7 +46,7 @@ export default function ProductCard({
             href={hrefInstall}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm rounded-md bg-[--color-accent] text-white px-3 py-1.5 hover:opacity-90"
+            className="text-sm rounded-md bg-[#ef4444] text-white px-3 py-1.5 hover:opacity-90"
           >
             Instalar extensión
           </a>

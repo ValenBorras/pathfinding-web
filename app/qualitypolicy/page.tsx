@@ -9,7 +9,7 @@ export default function QualityPolicyPage() {
   return (
     <div className="container py-12 sm:py-16">
       <SectionHeader eyebrow="Legal" title="Quality Policy" subtitle="Declaraciones de calidad (migrar texto completo)" />
-      <div className="mt-6 space-y-3 text-[--color-muted]">
+      <div className="mt-6 space-y-3 text-[#8a8a8a]">
         <ul className="list-disc list-inside space-y-2">
           <li>Compromiso con la mejora continua.</li>
           <li>Enfoque en el cliente y resultados medibles.</li>

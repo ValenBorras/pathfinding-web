@@ -13,7 +13,7 @@ export default function CodyPage() {
         title="Cody AI"
         subtitle="Asistente conversacional para consultas rápidas."
       />
-      <div className="mt-6 space-y-4 text-sm text-[--color-muted] max-w-prose">
+      <div className="mt-6 space-y-4 text-sm text-[#8a8a8a] max-w-prose">
         <p>
           Cody AI es un chatbot experimental. Puede equivocarse. Verifica
           información crítica antes de tomar decisiones. No compartas
@@ -22,7 +22,7 @@ export default function CodyPage() {
         <div>
           <a
             href="#"
-            className="inline-flex items-center rounded-md bg-[--color-accent] px-4 py-2 text-sm text-white"
+            className="inline-flex items-center rounded-md bg-[#ef4444] px-4 py-2 text-sm text-white"
           >
             Probar en WhatsApp
           </a>

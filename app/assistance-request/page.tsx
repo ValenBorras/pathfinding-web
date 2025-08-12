@@ -44,15 +44,15 @@ export default function AssistanceRequestPage() {
       >
         <div>
           <label className="block text-sm font-medium">Nombre</label>
-          <input name="name" required className="mt-1 w-full rounded-md border border-[--color-border] bg-background px-3 py-2" />
+          <input name="name" required className="mt-1 w-full rounded-md border border-[#303030] bg-[#161616] px-3 py-2" />
         </div>
         <div>
           <label className="block text-sm font-medium">Email</label>
-          <input type="email" name="email" required className="mt-1 w-full rounded-md border border-[--color-border] bg-background px-3 py-2" />
+          <input type="email" name="email" required className="mt-1 w-full rounded-md border border-[#303030] bg-[#161616] px-3 py-2" />
         </div>
         <div>
           <label className="block text-sm font-medium">Producto</label>
-          <select name="product" className="mt-1 w-full rounded-md border border-[--color-border] bg-background px-3 py-2">
+          <select name="product" className="mt-1 w-full rounded-md border border-[#303030] bg-[#161616] px-3 py-2">
             <option>FBAToolkit</option>
             <option>MercadoToolkit</option>
             <option>GIT 2.0</option>
@@ -61,7 +61,7 @@ export default function AssistanceRequestPage() {
         </div>
         <div>
           <label className="block text-sm font-medium">Mensaje</label>
-          <textarea name="message" rows={5} className="mt-1 w-full rounded-md border border-[--color-border] bg-background px-3 py-2" />
+          <textarea name="message" rows={5} className="mt-1 w-full rounded-md border border-[#303030] bg-[#161616] px-3 py-2" />
         </div>
         {/* Honeypot */}
         <input type="text" name="_hpt" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -69,11 +69,11 @@ export default function AssistanceRequestPage() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex items-center rounded-md bg-[--color-accent] px-4 py-2 text-sm text-white disabled:opacity-60"
+            className="inline-flex items-center rounded-md bg-[#ef4444] px-4 py-2 text-sm text-white disabled:opacity-60"
           >
             {status === "loading" ? "Enviando..." : "Enviar"}
           </button>
-          {message ? <span className="text-sm text-[--color-muted]">{message}</span> : null}
+          {message ? <span className="text-sm text-[#8a8a8a]">{message}</span> : null}
         </div>
       </form>
     </div>
