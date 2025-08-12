@@ -4,10 +4,10 @@
   /* Requested palette */
   --background: #161616; /* background */
   --foreground: #dcdcdc; /* titles (bone) */
-  --muted: #8a8a8a;      /* subtitles & body text */
+  --muted: #a2a1a1 #a2a1a1;      /* subtitles & body text */
   --border: #303030;     /* general borders */
   --card: #1a1a1a;       /* card backgrounds */
-  --accent: #ef4444;     /* red highlights */
+  --accent: #e30414;     /* red highlights */
   --accent-foreground: #ffffff;
 }
 
@@ -22,7 +22,7 @@
   --color-gray-100: var(--card);
   --color-gray-200: var(--card);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-geist-sans);
 }
 
 body {
@@ -47,18 +47,10 @@ body {
   /* Centered, constrained content for roomy side gutters on desktop */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1rem; /* reduced sangría */
+  padding-right: 1rem; /* reduced sangría */
   width: 100%;
-  max-width: 60rem; /* ~960px */
-}
-
-/* Links and buttons */
-a {
-  color: var(--foreground);
-}
-a:hover {
-  color: var(--accent);
+  max-width: 65rem; /* ~960px */
 }
 
 .btn {
@@ -76,4 +68,12 @@ a:hover {
 }
 .btn-outline:hover {
   background: var(--color-gray-100);
+}
+
+/* Keep dropdowns open when moving between trigger and panel */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1 !important;
+}
+.group:hover .group-hover\:pointer-events-auto {
+  pointer-events: auto !important;
 }

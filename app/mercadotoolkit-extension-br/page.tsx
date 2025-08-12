@@ -15,7 +15,7 @@ export default function MercadoToolkitBRPage() {
         subtitle="Extensão para Mercado Livre no Brasil com assistente de IA e ferramentas práticas."
       />
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
-        <div className="space-y-4 text-sm text-[#8a8a8a]">
+        <div className="space-y-4 text-sm text-[#a2a1a1]">
           <h3 className="text-base font-semibold text-foreground">Recursos</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>Assistente de IA para respostas e descrições.</li>
@@ -25,7 +25,7 @@ export default function MercadoToolkitBRPage() {
           <p className="text-xs">Aviso: Ferramenta independente, não afiliada ao Mercado Livre. Use com responsabilidade e respeitando os termos da plataforma.</p>
           <div className="pt-2">
             <a
-              className="inline-flex items-center rounded-md bg-[#ef4444] text-white px-4 py-2 text-sm"
+              className="inline-flex items-center rounded-md bg-[#e30414] text-white px-4 py-2 text-sm"
               href="https://mercadotoolkit.com"
               target="_blank"
               rel="noopener noreferrer"

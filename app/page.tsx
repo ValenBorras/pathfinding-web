@@ -4,17 +4,22 @@ export default function Home() {
   return (
     <div>
       <section className="container py-20 sm:py-28">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-6xl font-semibold leading-[1.1] tracking-tight">
-            Software que acelera tu operativa
+        <div>
+          <h1 className="text-[60px] leading-[60px] sm:text-6xl  font-medium tracking-tight">
+            Tu software. Tu control.
+            <br />
+            Sin ataduras.
           </h1>
-          <p className="mt-5 text-lg text-[#8a8a8a] max-w-prose">
-            Herramientas y extensiones prácticas para vendedores: FBAToolkit,
-            MercadoToolkit y GIT 2.0. Integraciones reales, automatización y
-            soporte claro.
+          <p className="mt-5 text-[24px] leading-[32px] text-[#9a9a9a] w-fit">
+          Si tu proveedor actual te dejara mañana… ¿podrías seguir operando?
+          Con NoLock AI, la respuesta siempre es SÍ.         
+           </p>
+          <p className="mt-12 text-[#9a9a9a]">
+          Con más de 15 años de experiencia en desarrollo de software y soluciones tecnológicas, presentamos <span className="font-medium text-[#dcdcdc]"> NoLock AI </span> , nuestra nueva propuesta que combina trayectoria y tecnología de vanguardia para ofrecer soluciones inteligentes, seguras y adaptadas a los desafíos actuales de la industria.         
           </p>
+
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/products" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition bg-[#ef4444] text-white">Ver productos</Link>
+            <Link href="/products" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition bg-[#e30414] text-white">Ver productos</Link>
             <Link href="/assistance-request" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition border border-[#303030]">Contacto</Link>
           </div>
         </div>
@@ -82,13 +87,13 @@ function ProductCard({
     <div className="rounded-lg border border-[#303030] p-6 bg-[#1a1a1a]">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <a href={hrefSite} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[#ef4444]">
+        <a href={hrefSite} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[#e30414]">
           Abrir sitio ↗
         </a>
       </div>
-      <p className="mt-2 text-sm text-[#8a8a8a]">{description}</p>
+      <p className="mt-2 text-sm text-[#a2a1a1]">{description}</p>
       <div className="mt-4">
-        <Link href={hrefDetails} className="text-sm hover:text-[#ef4444]">
+        <Link href={hrefDetails} className="text-sm hover:text-[#e30414]">
           Ver detalles
         </Link>
       </div>

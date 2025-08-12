@@ -1,15 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ variable: "--font-geist-sans", subsets: ["latin"] });
-const newsreader = Newsreader({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const spaceGrotesk = Space_Grotesk({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.pathfinding.com.ar"),
@@ -55,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full">
-      <body className={`${inter.variable} ${newsreader.variable} antialiased min-h-screen bg-background text-foreground`}> 
+      <body className={`${spaceGrotesk.variable} antialiased min-h-screen bg-background text-foreground`}>
         <Navbar />
         <main className="min-h-[calc(100vh-8rem)]">{children}</main>
         <Footer />

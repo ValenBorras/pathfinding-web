@@ -69,11 +69,11 @@ export default function AssistanceRequestPage() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex items-center rounded-md bg-[#ef4444] px-4 py-2 text-sm text-white disabled:opacity-60"
+            className="inline-flex items-center rounded-md bg-[#e30414] px-4 py-2 text-sm text-white disabled:opacity-60"
           >
             {status === "loading" ? "Enviando..." : "Enviar"}
           </button>
-          {message ? <span className="text-sm text-[#8a8a8a]">{message}</span> : null}
+          {message ? <span className="text-sm text-[#a2a1a1]">{message}</span> : null}
         </div>
       </form>
     </div>

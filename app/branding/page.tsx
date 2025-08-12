@@ -14,7 +14,7 @@ export default function BrandingPage() {
         title="Branding"
         subtitle="Experiencia en diseño, innovación y herramientas para vendedores."
       />
-      <div className="mt-6 space-y-4 text-[#8a8a8a] max-w-prose">
+      <div className="mt-6 space-y-4 text-[#a2a1a1] max-w-prose">
         <p>
           Pathfinding S.A. es una empresa argentina dedicada a investigación,
           diseño, soporte, desarrollo de software y consultoría.

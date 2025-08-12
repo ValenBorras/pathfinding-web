@@ -16,21 +16,21 @@ export default function SLAPage() {
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div className="rounded-lg border border-[#303030] p-4">
           <div className="font-medium">FBAToolkit</div>
-          <ul className="mt-2 text-sm text-[#8a8a8a] list-disc list-inside space-y-1">
+          <ul className="mt-2 text-sm text-[#a2a1a1] list-disc list-inside space-y-1">
             <li>Soporte por email: support@fbatoolkit.com</li>
             <li>Tiempo de respuesta: 1-2 días hábiles</li>
           </ul>
         </div>
         <div className="rounded-lg border border-[#303030] p-4">
           <div className="font-medium">MercadoToolkit</div>
-          <ul className="mt-2 text-sm text-[#8a8a8a] list-disc list-inside space-y-1">
+          <ul className="mt-2 text-sm text-[#a2a1a1] list-disc list-inside space-y-1">
             <li>Soporte por email: support@mercadotoolkit.com</li>
             <li>Tiempo de respuesta: 1-2 días hábiles</li>
           </ul>
         </div>
         <div className="rounded-lg border border-[#303030] p-4">
           <div className="font-medium">GIT 2.0</div>
-          <ul className="mt-2 text-sm text-[#8a8a8a] list-disc list-inside space-y-1">
+          <ul className="mt-2 text-sm text-[#a2a1a1] list-disc list-inside space-y-1">
             <li>Soporte por email: contact@pathfinding.com.ar</li>
             <li>Tiempo de respuesta: 2-3 días hábiles</li>
           </ul>

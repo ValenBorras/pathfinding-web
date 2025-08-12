@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-sm">
         <div>
           <div className="font-semibold mb-2">Pathfinding S.A.</div>
-          <p className="text-[#8a8a8a]">O’Higgins 105, Paraná, Entre Ríos (3100), Argentina</p>
+          <p className="text-[#a2a1a1]">O’Higgins 105, Paraná, Entre Ríos (3100), Argentina</p>
           <p className="mt-2"><a className="hover:underline" href="mailto:contact@pathfinding.com.ar">contact@pathfinding.com.ar</a></p>
         </div>
         <div>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-[#303030]">
-        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8a8a8a]">
+        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#a2a1a1]">
           <p>© {new Date().getFullYear()} Pathfinding S.A.</p>
           <div className="flex items-center gap-4">
             <a className="hover:underline" href="/gp-privacy-policy">Privacy</a>
