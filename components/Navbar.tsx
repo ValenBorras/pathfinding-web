@@ -12,7 +12,7 @@ export default function Navbar() {
   const triggerBase =
     "relative px-2 py-1 text-sm text-[#a2a1a1] transition-colors after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#e30414] after:transition-all hover:text-[#dcdcdc] hover:after:w-full";
 
-  const isAboutActive = ["/branding", "/creative", "/ieu"].some((p) => pathname?.startsWith(p));
+  const isAboutActive = ["/branding", "/creative", "/our-team"].some((p) => pathname?.startsWith(p));
   const isProductsActive = ["/products", "/tools", "/cody", "/sla"].some((p) => pathname?.startsWith(p));
   const isMoreActive = ["/qualitypolicy", "/gp-privacy-policy", "/ieu"].some((p) => pathname?.startsWith(p));
 
@@ -28,7 +28,7 @@ export default function Navbar() {
         <div>
           <Link href="/" className="flex items-center gap-4 p-2" aria-label="Pathfinding S.A. home">
             <Image
-              src="/new_pf_logo.png"
+              src="/new_pf_logo_blanco2.png"
               alt="Pathfinding S.A."
               width={200}
               height={78}
@@ -40,18 +40,17 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center justify-end text-sm pt-6">
           <div className="relative group">
-            <Link href="/branding" className={`${triggerBase} ${isAboutActive ? "text-[#dcdcdc] after:w-full" : "text-[#a2a1a1]"}`}>Sobre nosotros</Link>
+            <Link href="/" className={`${triggerBase} ${isAboutActive ? "text-[#dcdcdc] after:w-full" : "text-[#a2a1a1]"}`}>Sobre nosotros</Link>
             <div className="absolute left-1/2 -translate-x-1/2 text-[#a2a1a1] top-full z-40 p-2 w-max opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity">
               <Link href="/branding" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Branding</Link>
               <Link href="/creative" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Creative</Link>
-              <Link href="/ieu" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Our team</Link>
+              <Link href="/our-team" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Our team</Link>
             </div>
           </div>
           <span className="mx-1 text-[#a2a1a1] select-none">/</span>
           <div className="relative group">
-            <Link href="/products" className={`${triggerBase} ${isProductsActive ? "text-[#dcdcdc] after:w-full" : "text-[#a2a1a1]"}`}>Productos</Link>
+            <Link href="/tools" className={`${triggerBase} ${isProductsActive ? "text-[#dcdcdc] after:w-full" : "text-[#a2a1a1]"}`}>Productos</Link>
             <div className="absolute left-1/2 -translate-x-1/2 text-[#a2a1a1] top-full z-40 p-2 w-max opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity">
-              <Link href="/tools" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Tools</Link>
               <Link href="/cody" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">Cody</Link>
               <Link href="/sla" className="block px-3 py-2 whitespace-nowrap hover:text-[#dcdcdc] backdrop-blur-sm ">SLA</Link>
             </div>
@@ -90,17 +89,16 @@ export default function Navbar() {
         <div className="absolute top-0 left-0 right-0 bg-[#161616] border-b border-[#303030] pt-24 pb-6">
           <div className="container space-y-4 text-sm">
             <div>
-              <Link href="/branding" className={`block ${isAboutActive ? "text-[#dcdcdc]" : "text-[#a2a1a1]"}`}>Sobre nosotros</Link>
+              <Link href="/" className={`block ${isAboutActive ? "text-[#dcdcdc]" : "text-[#a2a1a1]"}`}>Sobre nosotros</Link>
               <div className="mt-2 pl-3 space-y-2 text-[#a2a1a1]">
                 <Link href="/branding" className="block">Branding</Link>
                 <Link href="/creative" className="block">Creative</Link>
-                <Link href="/ieu" className="block">Our team</Link>
+                <Link href="/our-team" className="block">Our team</Link>
               </div>
             </div>
             <div className="border-t border-[#303030] pt-4">
-              <Link href="/products" className={`block ${isProductsActive ? "text-[#dcdcdc]" : "text-[#a2a1a1]"}`}>Productos</Link>
+              <Link href="/tools" className={`block ${isProductsActive ? "text-[#dcdcdc]" : "text-[#a2a1a1]"}`}>Productos</Link>
               <div className="mt-2 pl-3 space-y-2 text-[#a2a1a1]">
-                <Link href="/tools" className="block">Tools</Link>
                 <Link href="/cody" className="block">Cody</Link>
                 <Link href="/sla" className="block">SLA</Link>
               </div>

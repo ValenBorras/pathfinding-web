@@ -35,9 +35,34 @@ export default function Footer() {
       <div className="border-t border-[#303030]">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#a2a1a1]">
           <p>© {new Date().getFullYear()} Pathfinding S.A.</p>
-          <div className="flex items-center gap-4">
-            <a className="hover:underline" href="/gp-privacy-policy">Privacy</a>
-            <a className="hover:underline" href="/qualitypolicy">Quality</a>
+          <div className="ml-auto flex items-center justify-end gap-2">
+            <a
+              href="http://qr.afip.gob.ar/?qr=2XnirD3_iE-6sXWaD-wM6A,,"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="QR Data Fiscal"
+            >
+              <img
+                src="/qrDataFiscal.avif"
+                alt="QR Data Fiscal"
+                className="h-20 w-auto grayscale"
+              />
+            </a>
+            <img
+              src="/certificadoTUVReinland.avif"
+              alt="Certificado TÜV Rheinland"
+              className="h-20 w-auto  grayscale"
+            />
+            <img
+              src="/InternationalEcommerceUniv.avif"
+              alt="International Ecommerce University"
+              className="h-20 w-auto grayscale"
+            />
+            <img
+              src="/baner-PDP_Mesa-de-trabajo-1.avif"
+              alt="International Ecommerce University "
+              className="h-20 w-auto grayscale"
+            />
           </div>
         </div>
       </div>
