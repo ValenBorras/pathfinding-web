@@ -1,5 +1,62 @@
+"use client";
+
 import Link from "next/link";
 import { FaCubes, FaShieldAlt, FaPlug, FaCheckCircle, FaBug, FaClock, FaQuoteLeft, FaHandshake } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
+
+// Custom hook for counting animation
+function useCountUp(target: number) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const duration = 2000; // 2 seconds
+          const steps = 60;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += 1;
+            if (current >= steps) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              // Easing function: starts fast, slows down (ease-out)
+              const progress = current / steps;
+              const easedProgress = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
+              const currentValue = Math.floor(target * easedProgress);
+              setCount(currentValue);
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [target, hasAnimated]);
+
+  return { count, ref };
+}
+
+// MetricCard component for animated counters
+function MetricCard({ target, suffix, label }: { target: number; suffix: string; label: string }) {
+  const { count, ref } = useCountUp(target);
+  return (
+    <div className="rounded-lg border border-[#303030] p-5" ref={ref}>
+      <div className="text-3xl font-semibold">{count}{suffix}</div>
+      <div className="mt-1 text-sm text-[#a2a1a1]">{label}</div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -30,50 +87,43 @@ export default function Home() {
               <Link href="/assistance-request" className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition border border-[#303030]">Contacto</Link>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 text-xs text-[#a2a1a1]">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Sin vendor lock</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Sin vendor lock-in</span>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Integraciones abiertas</span>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Equipo senior</span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Transparencia total</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#303030] px-3 py-1">Transparencia total</span> 
             </div>
           </div>
 
           {/* imagen debajo del hero */}
-          <div className="mt-10 relative h-72 sm:h-96 rounded-lg border border-[#303030] bg-[#1a1a1a]">
-            <div className="absolute inset-0 grid place-items-center">
-              <div className="text-center">
-                <div className="text-sm text-[#a2a1a1]">Espacio para imagen</div>
-                <div className="mt-1 text-xs text-[#6b6b6b]">(producto, equipo o caso de éxito)</div>
+          <div className="mt-30 relative h-72 sm:h-96 rounded-lg border border-[#303030] bg-[#1a1a1a] overflow-hidden">
+            <img src="/oficinaPF.png" alt="Hero Image" className="w-full h-full object-cover rounded-lg grayscale" />
+            
+            {/* Quote overlay */}
+            <div className="absolute inset-0 bg-black/70 rounded-lg">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-[#dcdcdc] max-w-2xl mx-4">
+                  <div className="text-xl sm:text-2xl font-extrabold mb-3 border-l-4 border-[#e30414] pl-4">
+                    Código rápido, código tuyo. Construimos soluciones a velocidad de startup, pero con la robustez de una empresa con 15 años de experiencia.
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="absolute inset-0 rounded-lg border-2 border-dashed border-[#303030]" />
           </div>
         </div>
       </section>
 
       {/* Métricas y propuesta de valor */}
-      <section className="container py-8 sm:py-12">
+      <section className="container py-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-lg border border-[#303030] p-5">
-            <div className="text-3xl font-semibold">15+</div>
-            <div className="mt-1 text-sm text-[#a2a1a1]">Años construyendo software</div>
-          </div>
-          <div className="rounded-lg border border-[#303030] p-5">
-            <div className="text-3xl font-semibold">99.9%</div>
-            <div className="mt-1 text-sm text-[#a2a1a1]">Disponibilidad en producción</div>
-          </div>
-          <div className="rounded-lg border border-[#303030] p-5">
-            <div className="text-3xl font-semibold">70+</div>
-            <div className="mt-1 text-sm text-[#a2a1a1]">Integraciones y APIs</div>
-          </div>
-          <div className="rounded-lg border border-[#303030] p-5">
-            <div className="text-3xl font-semibold">24/7</div>
-            <div className="mt-1 text-sm text-[#a2a1a1]">Monitoreo y soporte</div>
-          </div>
+          <MetricCard target={15} suffix="+" label="Años construyendo software" />
+          <MetricCard target={99.9} suffix="%" label="Disponibilidad en producción" />
+          <MetricCard target={70} suffix="+" label="Integraciones y APIs" />
+          <MetricCard target={24} suffix="/7" label="Monitoreo y soporte" />
         </div>
       </section>
 
       {/* Beneficios clave con iconos */}
-      <section className="container py-10 sm:py-14">
+      <section className="container py-16">
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="relative rounded-lg border border-[#303030] bg-[#1a1a1a] p-6 pt-10 text-center">
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 h-12 w-12 rounded-full bg-[#141414] border border-[#303030] grid place-items-center text-[#dcdcdc]">
@@ -101,8 +151,8 @@ export default function Home() {
 
       {/* Garantías vistosas */}
       <section className="container py-16">
-        <div className="max-w-4xl">
-          <div className="flex items-center gap-2">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2">
             <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-[#e30414]/15 text-[#e30414]">
               <FaHandshake />
             </span>
@@ -130,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Testimonio centrado y liviano */}
-      <section className="container py-10">
+      <section className="container py-16">
         <figure className="max-w-3xl mx-auto text-center">
           <div className="mx-auto mb-3 h-10 w-10 rounded-full bg-[#e30414] text-white grid place-items-center">
             <FaQuoteLeft />
@@ -143,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* CTA final */}
-      <section className="container py-10 sm:py-14">
+      <section className="container py-16">
         <div className="rounded-lg border border-[#303030] p-6 bg-[#1a1a1a] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h3 className="text-lg font-semibold">¿Listos para diseñar sin ataduras?</h3>
